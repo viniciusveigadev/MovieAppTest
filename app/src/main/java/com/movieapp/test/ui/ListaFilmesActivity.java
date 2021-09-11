@@ -52,23 +52,5 @@ public class ListaFilmesActivity extends AppCompatActivity {
                     }
                 });
     }
-
-    //4
-    private List<Filme> criaFilmes() {
-        return Arrays.asList(
-                new Filme("Homem aranha"),
-                new Filme("Homem aranha"),
-                new Filme("Homem aranha"),
-                new Filme("Homem aranha"),
-                new Filme("Homem aranha"),
-                new Filme("Homem aranha"),
-                new Filme("Homem aranha"),
-                new Filme("Homem aranha"),
-                new Filme("Homem aranha"),
-                new Filme("Homem aranha"),
-                new Filme("Homem aranha"),
-                new Filme("Homem aranha")
-        );
-    }
-
+    
 }
