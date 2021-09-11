@@ -8,6 +8,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.movieapp.test.R;
+import com.movieapp.test.data.model.Filme;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class ListaFilmesActivity extends AppCompatActivity {
     @Override
@@ -20,7 +24,25 @@ public class ListaFilmesActivity extends AppCompatActivity {
         RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(this);
         //3
         recyclerFilmes.setLayoutManager(linearLayoutManager);
-        recyclerFilmes.setAdapter(new ListaFilmesAdapter()); //Recebe de fato a Classe ListaFilmesAdapter que esta tudo configurado
+        recyclerFilmes.setAdapter(new ListaFilmesAdapter(criaFilmes())); //Recebe de fato a Classe ListaFilmesAdapter que esta tudo configurado
 
     }
+
+    private List<Filme> criaFilmes() {
+        return Arrays.asList(
+                new Filme("Homem aranha"),
+                new Filme("Homem aranha"),
+                new Filme("Homem aranha"),
+                new Filme("Homem aranha"),
+                new Filme("Homem aranha"),
+                new Filme("Homem aranha"),
+                new Filme("Homem aranha"),
+                new Filme("Homem aranha"),
+                new Filme("Homem aranha"),
+                new Filme("Homem aranha"),
+                new Filme("Homem aranha"),
+                new Filme("Homem aranha")
+        );
+    }
+
 }

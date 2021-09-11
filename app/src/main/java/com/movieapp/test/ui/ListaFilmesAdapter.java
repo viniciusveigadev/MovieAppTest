@@ -9,8 +9,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.movieapp.test.R;
+import com.movieapp.test.data.model.Filme;
+
+import java.util.List;
 
 public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.ListaFilmesViewHolder> {
+
+    public List<Filme> filmes;
+
+    public ListaFilmesAdapter(List<Filme> filmes){
+        this.filmes = filmes;
+    }
 
     @NonNull
     @Override
@@ -22,12 +31,12 @@ public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.
     @Override
     public void onBindViewHolder(@NonNull ListaFilmesViewHolder holder, int position) { // Esse cara chamado holder vai pegar cada item da sua lista e colocar em pilha de acordo com o total do retunr em getItemCount
         //Apartir de agora posso passar a informação para o meu id text_titulo_filme
-        holder.textTituloFilme.setText("Esse é o filme 1 da position 0 da sua lista");
+        holder.textTituloFilme.setText(filmes.get(position).getNome());
     }
 
     @Override
     public int getItemCount() {
-        return 5;
+        return (filmes != null && filmes.size() > 0) ? filmes.size() : 0;
     }
 
     static class ListaFilmesViewHolder extends RecyclerView.ViewHolder {
