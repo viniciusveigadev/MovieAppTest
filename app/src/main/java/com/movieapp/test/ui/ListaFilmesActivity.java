@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.movieapp.test.R;
 import com.movieapp.test.data.model.Filme;
 import com.movieapp.test.data.network.ApiService;
+import com.movieapp.test.data.network.response.FilmesResult;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,24 +30,23 @@ public class ListaFilmesActivity extends AppCompatActivity {
 
         //5
         ApiService.getInstance().obterFilmesPopulares("fcb6188dc381c27658a694c99c2bbd12")
-                .enqueue(new Callback<ResponseBody>() { //.execute() fará a aplicação quebrar pois esta é a thread principal;
+                .enqueue(new Callback<FilmesResult>() {
                     @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-
+                    public void onResponse(Call<FilmesResult> call, Response<FilmesResult> response) {
+                        if(response.isSuccessful()){
+                            //2
+                            RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(ListaFilmesActivity.this);
+                            //3
+                            recyclerFilmes.setLayoutManager(linearLayoutManager);
+                            recyclerFilmes.setAdapter(new ListaFilmesAdapter(criaFilmes())); //Recebe de fato a Classe ListaFilmesAdapter que esta tudo configurado
+                        }
                     }
 
                     @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    public void onFailure(Call<FilmesResult> call, Throwable t) {
 
                     }
                 });
-
-        //2
-        RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        //3
-        recyclerFilmes.setLayoutManager(linearLayoutManager);
-        recyclerFilmes.setAdapter(new ListaFilmesAdapter(criaFilmes())); //Recebe de fato a Classe ListaFilmesAdapter que esta tudo configurado
-
     }
         //4
     private List<Filme> criaFilmes() {
