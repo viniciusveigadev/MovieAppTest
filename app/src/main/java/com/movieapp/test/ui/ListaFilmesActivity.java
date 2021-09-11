@@ -52,5 +52,5 @@ public class ListaFilmesActivity extends AppCompatActivity {
                     }
                 });
     }
-    
+
 }
