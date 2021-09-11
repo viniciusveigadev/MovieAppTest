@@ -16,9 +16,9 @@ import java.util.List;
 
 public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.ListaFilmesViewHolder> {
 
-    public List<FilmesResponse> filmes; //Mudamos o tipo, pois agora criamos a clase FilmeResponse, e é nela que estão as repostas da API
+    private List<FilmesResponse> filmes; //Mudamos o tipo, pois agora criamos a clase FilmeResponse, e é nela que estão as repostas da API
 
-    public ListaFilmesAdapter(List<FilmesResponse> filmes){ //Mudamos o tipo, pois agora criamos a clase FilmeResponse, e é nela que estão as repostas da API
+    public ListaFilmesAdapter(List<FilmesResponse> filmes) { //Mudamos o tipo, pois agora criamos a clase FilmeResponse, e é nela que estão as repostas da API
         this.filmes = filmes;
     }
 
@@ -51,5 +51,4 @@ public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.
 
         }
     }
-
 }

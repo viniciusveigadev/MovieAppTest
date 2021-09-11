@@ -33,7 +33,8 @@ public class ListaFilmesActivity extends AppCompatActivity {
         recyclerFilmes = findViewById(R.id.recycler_view);
 
         //5
-        ApiService.getInstance().obterFilmesPopulares("fcb6188dc381c27658a694c99c2bbd12")
+        ApiService.getInstance()
+                .obterFilmesPopulares("fcb6188dc381c27658a694c99c2bbd12")
                 .enqueue(new Callback<FilmesResult>() {
                     @Override
                     public void onResponse(Call<FilmesResult> call, Response<FilmesResult> response) {
@@ -52,5 +53,4 @@ public class ListaFilmesActivity extends AppCompatActivity {
                     }
                 });
     }
-
 }

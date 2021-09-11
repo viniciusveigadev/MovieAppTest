@@ -5,6 +5,7 @@ import com.squareup.moshi.Json;
 import java.util.List;
 
 public class FilmesResult {
+
     @Json(name = "results")
     private final List<FilmesResponse> resultadoFilmes;
 

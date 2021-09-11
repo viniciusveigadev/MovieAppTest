@@ -3,6 +3,7 @@ package com.movieapp.test.data.network.response;
 import com.squareup.moshi.Json;
 
 public class FilmesResponse {
+
     @Json(name = "poster_path")
     private final String caminhoPoster;
 

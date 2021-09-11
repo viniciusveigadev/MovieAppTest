@@ -10,7 +10,7 @@ public class ApiService {
     public static FilmesService getInstance() {
         if (INSTANCE == null) {
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl(" https://api.themoviedb.org/3/")
+                    .baseUrl("https://api.themoviedb.org/3/")
                     .addConverterFactory(MoshiConverterFactory.create())
                     .build();
             INSTANCE = retrofit.create(FilmesService.class); //Retrofit de fato esta criando uma instancia para então ser possivel acessar rotas do tipo GET etc. disponíveis na interface;
