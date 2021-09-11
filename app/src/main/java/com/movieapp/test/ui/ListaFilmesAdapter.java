@@ -10,14 +10,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.movieapp.test.R;
 import com.movieapp.test.data.model.Filme;
+import com.movieapp.test.data.network.response.FilmesResponse;
 
 import java.util.List;
 
 public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.ListaFilmesViewHolder> {
 
-    public List<Filme> filmes;
+    public List<FilmesResponse> filmes; //Mudamos o tipo, pois agora criamos a clase FilmeResponse, e é nela que estão as repostas da API
 
-    public ListaFilmesAdapter(List<Filme> filmes){
+    public ListaFilmesAdapter(List<FilmesResponse> filmes){ //Mudamos o tipo, pois agora criamos a clase FilmeResponse, e é nela que estão as repostas da API
         this.filmes = filmes;
     }
 
@@ -31,7 +32,7 @@ public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.
     @Override
     public void onBindViewHolder(@NonNull ListaFilmesViewHolder holder, int position) { // Esse cara chamado holder vai pegar cada item da sua lista e colocar em pilha de acordo com o total do retunr em getItemCount
         //Apartir de agora posso passar a informação para o meu id text_titulo_filme
-        holder.textTituloFilme.setText(filmes.get(position).getNome());
+        holder.textTituloFilme.setText(filmes.get(position).getTituloOriginal()); //Apenas teste. obtendo o titulo do filme por enquanto
     }
 
     @Override
