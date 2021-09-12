@@ -3,6 +3,7 @@ package com.movieapp.test.ui;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.movieapp.test.R;
 import com.movieapp.test.data.model.Filme;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +20,7 @@ public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.
 
     private List<Filme> filmes; //Deixamos o FilmeResponse só para converter o que ta vindo em código java, então agora pegamos os dados da classe Filme (como se fosse uma dataclass em kotlin)
 
-    public ListaFilmesAdapter(){
+    public ListaFilmesAdapter() {
         filmes = new ArrayList<>();
     }
 
@@ -31,8 +33,7 @@ public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ListaFilmesViewHolder holder, int position) { // Esse cara chamado holder vai pegar cada item da sua lista e colocar em pilha de acordo com o total do retunr em getItemCount
-        //Apartir de agora posso passar a informação para o meu id text_titulo_filme
-        holder.textTituloFilme.setText(filmes.get(position).getTitulo()); //Apenas teste.
+        holder.bind(filmes.get(position)); //Posição de cada item vindo da api sendo enviado para a função bind]
     }
 
     @Override
@@ -43,16 +44,27 @@ public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.
     static class ListaFilmesViewHolder extends RecyclerView.ViewHolder {
 
         private TextView textTituloFilme;
+        private ImageView imagePosterFilme;
 
         public ListaFilmesViewHolder(View itemView) { //itemView esta recebendo a view de fato (que é o nosso layout R.layout.item_filme )
             super(itemView);
 
             textTituloFilme = itemView.findViewById(R.id.text_titulo_filme);
+            imagePosterFilme = itemView.findViewById(R.id.image_poster_filme);
+        }
+
+        public void bind(Filme filme) {
+            //Agora o bind esta sendo feito de fato
+            textTituloFilme.setText(filme.getTitulo());
+            //o bind da imagem do poster é feito atráves do picasso
+            Picasso.get()
+                    .load("http://i.imgur.com/DvpvklR.png" + filme.getCaminhoPoster())
+                    .into(imagePosterFilme);
 
         }
     }
 
-    public void setFilmes(List<Filme> filmes){
+    public void setFilmes(List<Filme> filmes) {
         this.filmes = filmes;
         notifyDataSetChanged(); //Responsável por ver todos os itens que esta chegando pro adapter
     }
