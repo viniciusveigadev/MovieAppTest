@@ -58,7 +58,7 @@ public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.
             textTituloFilme.setText(filme.getTitulo());
             //o bind da imagem do poster é feito atráves do picasso
             Picasso.get()
-                    .load("http://i.imgur.com/DvpvklR.png" + filme.getCaminhoPoster())
+                    .load("https://image.tmdb.org/t/p/w500/" + filme.getCaminhoPoster())
                     .into(imagePosterFilme);
 
         }

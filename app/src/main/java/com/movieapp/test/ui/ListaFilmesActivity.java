@@ -5,6 +5,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -42,16 +43,16 @@ public class ListaFilmesActivity extends AppCompatActivity {
 
         filmesAdapter = new ListaFilmesAdapter();
         //2
-        RecyclerView.LayoutManager linearLayoutManager = new LinearLayoutManager(ListaFilmesActivity.this);
+        RecyclerView.LayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         //3
-        recyclerFilmes.setLayoutManager(linearLayoutManager);
+        recyclerFilmes.setLayoutManager(gridLayoutManager);
         recyclerFilmes.setAdapter(filmesAdapter); //Recebe os resultados vindo da classe Filme que foi configurado no adapter
     }
 
     private void obtemFIlmes() {
         //5
         ApiService.getInstance()
-                .obterFilmesPopulares("fcb6188dc381c27658a694c99c2bbd12")
+                .obterFilmesPopulares("fcb6188dc381c27658a694c99c2bbd12", "pt-BR")
                 .enqueue(new Callback<FilmesResult>() {
                     @Override
                     public void onResponse(Call<FilmesResult> call, Response<FilmesResult> response) {
