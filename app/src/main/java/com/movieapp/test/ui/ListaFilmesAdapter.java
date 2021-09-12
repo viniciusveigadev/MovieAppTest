@@ -10,16 +10,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.movieapp.test.R;
 import com.movieapp.test.data.model.Filme;
-import com.movieapp.test.data.network.response.FilmesResponse;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.ListaFilmesViewHolder> {
 
-    private List<FilmesResponse> filmes; //Mudamos o tipo, pois agora criamos a clase FilmeResponse, e é nela que estão as repostas da API
+    private List<Filme> filmes; //Deixamos o FilmeResponse só para converter o que ta vindo em código java, então agora pegamos os dados da classe Filme (como se fosse uma dataclass em kotlin)
 
-    public ListaFilmesAdapter(List<FilmesResponse> filmes) { //Mudamos o tipo, pois agora criamos a clase FilmeResponse, e é nela que estão as repostas da API
-        this.filmes = filmes;
+    public ListaFilmesAdapter(){
+        filmes = new ArrayList<>();
     }
 
     @NonNull
@@ -32,7 +32,7 @@ public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.
     @Override
     public void onBindViewHolder(@NonNull ListaFilmesViewHolder holder, int position) { // Esse cara chamado holder vai pegar cada item da sua lista e colocar em pilha de acordo com o total do retunr em getItemCount
         //Apartir de agora posso passar a informação para o meu id text_titulo_filme
-        holder.textTituloFilme.setText(filmes.get(position).getTituloOriginal()); //Apenas teste. obtendo o titulo do filme por enquanto
+        holder.textTituloFilme.setText(filmes.get(position).getTitulo()); //Apenas teste.
     }
 
     @Override
@@ -50,5 +50,10 @@ public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.
             textTituloFilme = itemView.findViewById(R.id.text_titulo_filme);
 
         }
+    }
+
+    public void setFilmes(List<Filme> filmes){
+        this.filmes = filmes;
+        notifyDataSetChanged(); //Responsável por ver todos os itens que esta chegando pro adapter
     }
 }
