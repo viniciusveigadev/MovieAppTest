@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieAppTest">
 
-        <activity android:name=".ui.ListaFilmesActivity">
+        <activity android:name=".ui.MovieListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

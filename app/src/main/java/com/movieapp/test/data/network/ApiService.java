@@ -5,15 +5,15 @@ import retrofit2.converter.moshi.MoshiConverterFactory;
 
 public class ApiService {
 
-    public static FilmesService INSTANCE;
+    public static MovieService INSTANCE;
 
-    public static FilmesService getInstance() {
+    public static MovieService getInstance() {
         if (INSTANCE == null) {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("https://api.themoviedb.org/3/")
                     .addConverterFactory(MoshiConverterFactory.create())
                     .build();
-            INSTANCE = retrofit.create(FilmesService.class);
+            INSTANCE = retrofit.create(MovieService.class);
         }
         return INSTANCE;
     }

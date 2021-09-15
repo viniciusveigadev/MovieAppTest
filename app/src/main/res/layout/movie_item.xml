@@ -15,23 +15,23 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/image_poster_filme"
+            android:id="@+id/image_movie_poster"
             android:layout_width="200dp"
             android:layout_height="250dp"
             android:layout_centerHorizontal="true"
             android:scaleType="fitXY"/>
 
         <TextView
-            android:id="@+id/text_titulo_filme"
+            android:id="@+id/text_movie_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/image_poster_filme"
+            android:layout_below="@+id/image_movie_poster"
             android:layout_centerHorizontal="true"
             android:gravity="center_horizontal"
             android:padding="16dp"
             android:textAlignment="center"
             android:textColor="@color/black"
-            tools:text="Titulo do filme" />
+            tools:text="Titulo do movie" />
     </RelativeLayout>
 
 
