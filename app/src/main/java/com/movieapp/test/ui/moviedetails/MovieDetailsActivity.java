@@ -18,9 +18,11 @@ public class MovieDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_movie_details);
 
         TextView txt_movie_title = findViewById(R.id.text_title_movie_details_activity);
+        TextView txt_overview = findViewById(R.id.text_movie_overview);
 
         final Movie movie = (Movie) getIntent().getSerializableExtra(MOVIE_EXTRA);
 
         txt_movie_title.setText(movie.getTitle());
+        txt_overview.setText(movie.getOverview());
     }
 }

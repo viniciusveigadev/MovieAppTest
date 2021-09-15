@@ -10,9 +10,13 @@ public class MovieResponse {
     @Json(name = "title")
     private final String title;
 
-    public MovieResponse(String posterPath, String title) {
+    @Json(name = "overview")
+    private final String overview;
+
+    public MovieResponse(String posterPath, String title, String overview) {
         this.posterPath = posterPath;
         this.title = title;
+        this.overview = overview;
     }
     public String getPosterPath() {
         return posterPath;
@@ -20,5 +24,9 @@ public class MovieResponse {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getOverview() {
+        return overview;
     }
 }
