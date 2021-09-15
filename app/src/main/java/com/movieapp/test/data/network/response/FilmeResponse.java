@@ -14,7 +14,6 @@ public class FilmeResponse {
         this.caminhoPoster = caminhoPoster;
         this.tituloOriginal = tituloOriginal;
     }
-//Getter que nos dão liberdade de obter os dados e "JOGAR" no nosso adapter. Mais especificamente no viewHolder que é o cara que joga os dados em cada item da lista
     public String getCaminhoPoster() {
         return caminhoPoster;
     }

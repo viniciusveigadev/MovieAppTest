@@ -12,10 +12,10 @@ public class FilmeMapper {
         List<Filme> listaFilmes = new ArrayList<>();
 
         for (FilmeResponse filmeResponse : listaFilmeResponse) {
-            final Filme filme = new Filme(filmeResponse.getTituloOriginal(), filmeResponse.getCaminhoPoster()); //Primeira coisa que o construtor pede é o titulo e ele ta vindo da clase de response que é FilmesResponse (vindo em Json e Java) e sendo jogado na classe de dominio que é Filme(classe tupo dataclass do kotlin). Ou seja passa pela response, depois dominio e enfim chega certinho aqui.
-            listaFilmes.add(filme); //Add primneiro item no array de filmes
+            final Filme filme = new Filme(filmeResponse.getTituloOriginal(), filmeResponse.getCaminhoPoster());
+            listaFilmes.add(filme);
         }
 
-        return  listaFilmes; //reorna o array com os dados
+        return  listaFilmes;
     }
 }

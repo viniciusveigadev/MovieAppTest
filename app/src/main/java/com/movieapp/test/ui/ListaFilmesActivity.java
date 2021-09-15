@@ -26,7 +26,7 @@ import retrofit2.Response;
 public class ListaFilmesActivity extends AppCompatActivity {
 
     //1
-    private RecyclerView recyclerFilmes; //Global scope / Escopo global
+    private RecyclerView recyclerFilmes;
     private ListaFilmesAdapter filmesAdapter;
 
     @Override
@@ -42,26 +42,23 @@ public class ListaFilmesActivity extends AppCompatActivity {
         recyclerFilmes = findViewById(R.id.recycler_view);
 
         filmesAdapter = new ListaFilmesAdapter();
-        //2
+
         RecyclerView.LayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
-        //3
         recyclerFilmes.setLayoutManager(gridLayoutManager);
-        recyclerFilmes.setAdapter(filmesAdapter); //Recebe os resultados vindo da classe Filme que foi configurado no adapter
+        recyclerFilmes.setAdapter(filmesAdapter);
     }
 
     private void obtemFIlmes() {
-        //5
         ApiService.getInstance()
                 .obterFilmesPopulares("fcb6188dc381c27658a694c99c2bbd12", "pt-BR")
                 .enqueue(new Callback<FilmesResult>() {
                     @Override
                     public void onResponse(Call<FilmesResult> call, Response<FilmesResult> response) {
                         if (response.isSuccessful()) { //200 ok
-                            //response adapter
                             final List<Filme> listaFilmes = FilmeMapper.
                                     deResponseParaDominio(response.body().getResultadoFilmes());
                             filmesAdapter.setFilmes(listaFilmes);
-                        }else { // resposta http diferente de 200 ok
+                        }else {
                             mostraErro();
                         }
                     }
