@@ -19,8 +19,11 @@ import java.util.List;
 public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.moviesListViewHolder> {
 
     private List<Movie> movies;
+    private static MovieItemClickListener movieItemClickListener;
 
-    public MovieListAdapter() {
+    public MovieListAdapter(MovieItemClickListener movieItemClickListener) {
+        this.movieItemClickListener = movieItemClickListener;
+
         movies = new ArrayList<>();
     }
 
@@ -45,15 +48,26 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.movi
 
         private TextView txtMovieTitle;
         private ImageView imgMoviePoster;
+        private Movie movie;
 
         public moviesListViewHolder(View itemView) {
             super(itemView);
 
             txtMovieTitle = itemView.findViewById(R.id.text_movie_title);
             imgMoviePoster = itemView.findViewById(R.id.image_movie_poster);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (movieItemClickListener != null) {
+                        movieItemClickListener.onClickMovieItem(movie);
+                    }
+                }
+            });
         }
 
         public void bind(Movie movie) {
+            this.movie = movie;
 
             txtMovieTitle.setText(movie.getTitle());
 
@@ -67,5 +81,10 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.movi
     public void setMovies(List<Movie> filmes) {
         this.movies = filmes;
         notifyDataSetChanged();
+    }
+
+    public interface MovieItemClickListener {
+
+        void onClickMovieItem(Movie movie);
     }
 }

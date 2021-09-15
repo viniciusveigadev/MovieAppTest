@@ -1,6 +1,8 @@
 package com.movieapp.test.data.model;
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable {
     private final String title;
     private final String posterPath;
 

@@ -15,7 +15,7 @@ public class MovieListPresenter implements MovieListInterface.MovieListPresenter
 
     private MovieListInterface.MovieListView view;
 
-    public MovieListPresenter(MovieListInterface.MovieListView view){
+    public MovieListPresenter(MovieListInterface.MovieListView view) {
         this.view = view;
     }
 

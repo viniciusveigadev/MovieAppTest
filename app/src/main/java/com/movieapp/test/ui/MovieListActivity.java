@@ -1,5 +1,6 @@
 package com.movieapp.test.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -10,10 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.movieapp.test.R;
 import com.movieapp.test.data.model.Movie;
+import com.movieapp.test.ui.moviedetails.MovieDetailsActivity;
 
 import java.util.List;
 
-public class MovieListActivity extends AppCompatActivity implements MovieListInterface.MovieListView {
+public class MovieListActivity extends AppCompatActivity implements MovieListInterface.MovieListView, MovieListAdapter.MovieItemClickListener {
 
     private RecyclerView recyclerMovies;
     private MovieListAdapter moviesAdapter;
@@ -34,7 +36,7 @@ public class MovieListActivity extends AppCompatActivity implements MovieListInt
     private void setAdapter() {
         recyclerMovies = findViewById(R.id.recycler_view);
 
-        moviesAdapter = new MovieListAdapter();
+        moviesAdapter = new MovieListAdapter(this);
 
         RecyclerView.LayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         recyclerMovies.setLayoutManager(gridLayoutManager);
@@ -55,5 +57,12 @@ public class MovieListActivity extends AppCompatActivity implements MovieListInt
     protected void onDestroy() {
         super.onDestroy();
         presenter.viewOnDestroy();
+    }
+
+    @Override
+    public void onClickMovieItem(Movie movie) {
+        Intent intent = new Intent(this, MovieDetailsActivity.class);
+        intent.putExtra(MovieDetailsActivity.MOVIE_EXTRA, movie);
+        startActivity(intent);
     }
 }
