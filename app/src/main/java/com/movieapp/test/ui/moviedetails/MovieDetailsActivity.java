@@ -65,7 +65,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
                     //Remove unfavorite movie(s) from database
                     database.execSQL("DELETE FROM movies WHERE favorite = 'false' ");
-                    Snackbar.make(v, "Removido dos favorites", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(v, "Removido dos favoritos", Snackbar.LENGTH_SHORT).show();
 
                 } else {
                     favButton.setImageResource(R.drawable.ic_baseline_favorite_24);
