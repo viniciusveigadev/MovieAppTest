@@ -26,9 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/image_movie_poster"
-            android:layout_centerHorizontal="true"
             android:gravity="center_horizontal"
-            android:padding="16dp"
+            android:padding="12dp"
             android:textAlignment="center"
             android:textColor="@color/black"
             tools:text="Titulo do movie" />

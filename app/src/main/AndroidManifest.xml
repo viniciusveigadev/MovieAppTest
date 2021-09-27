@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieAppTest">
         <activity android:name=".ui.moviedetails.MovieDetailsActivity" />
+        <activity
+            android:name=".ui.FavoriteActivity"
+            android:parentActivityName=".ui.MovieListActivity" />
         <activity android:name=".ui.MovieListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

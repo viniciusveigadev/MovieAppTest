@@ -74,12 +74,11 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.movi
             Picasso.get()
                     .load("https://image.tmdb.org/t/p/w500/" + movie.getPosterPath())
                     .into(imgMoviePoster);
-
         }
     }
 
-    public void setMovies(List<Movie> filmes) {
-        this.movies = filmes;
+    public void setMovies(List<Movie> movies) {
+        this.movies = movies;
         notifyDataSetChanged();
     }
 

@@ -13,10 +13,14 @@ public class MovieResponse {
     @Json(name = "overview")
     private final String overview;
 
-    public MovieResponse(String posterPath, String title, String overview) {
+    @Json(name = "id")
+    private final int id;
+
+    public MovieResponse(String posterPath, String title, String overview, int id) {
         this.posterPath = posterPath;
         this.title = title;
         this.overview = overview;
+        this.id = id;
     }
     public String getPosterPath() {
         return posterPath;
@@ -28,5 +32,9 @@ public class MovieResponse {
 
     public String getOverview() {
         return overview;
+    }
+
+    public int getId() {
+        return id;
     }
 }
