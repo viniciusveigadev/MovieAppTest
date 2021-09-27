@@ -7,13 +7,15 @@ public class Movie implements Serializable {
     private final String posterPath;
     private final String overview;
     private final int id;
+    private final String release_date;
     private boolean isMovieFavorited;
 
-    public Movie(String title, String posterPath, String overview, int id) {
+    public Movie(String title, String posterPath, String overview, int id, String release_date) {
         this.title = title;
         this.posterPath = posterPath;
         this.overview = overview;
         this.id = id;
+        this.release_date = release_date;
         this.isMovieFavorited = false;
     }
 
@@ -31,6 +33,10 @@ public class Movie implements Serializable {
 
     public int getId() {
         return id;
+    }
+
+    public String getRelease_date() {
+        return release_date;
     }
 
     public boolean isMovieFavorited() {

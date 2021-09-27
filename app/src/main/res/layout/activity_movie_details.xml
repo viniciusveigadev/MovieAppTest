@@ -49,6 +49,14 @@
                 android:textColor="@color/black"
                 tools:text="Overview" />
 
+            <TextView
+                android:id="@+id/txt_release_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="TextView"
+                android:textSize="24sp" />
+
         </LinearLayout>
     </ScrollView>
 

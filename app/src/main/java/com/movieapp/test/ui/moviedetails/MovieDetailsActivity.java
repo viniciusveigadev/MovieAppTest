@@ -25,6 +25,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
     ImageView image_poster;
     ImageView favButton;
     TextView txt_overview;
+    TextView txt_release_date;
 
     SQLiteDatabase database;
     Movie movie;
@@ -41,6 +42,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         image_poster = findViewById(R.id.poster_full);
         favButton = findViewById(R.id.im_fav_button_details_activity);
         txt_overview = findViewById(R.id.text_movie_overview);
+        txt_release_date = findViewById(R.id.txt_release_date);
 
         database = openOrCreateDatabase("app", MODE_PRIVATE, null);
         database.execSQL("CREATE TABLE IF NOT EXISTS movies(id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, favorite VARCHAR)");
@@ -80,6 +82,8 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
         //Set Movie Overview
         txt_overview.setText(movie.getOverview());
+
+        txt_release_date.setText(movie.getRelease_date());
 
     }
 

@@ -16,11 +16,15 @@ public class MovieResponse {
     @Json(name = "id")
     private final int id;
 
-    public MovieResponse(String posterPath, String title, String overview, int id) {
+    @Json(name = "release_date")
+    private final String release_date;
+
+    public MovieResponse(String posterPath, String title, String overview, int id, String release_date) {
         this.posterPath = posterPath;
         this.title = title;
         this.overview = overview;
         this.id = id;
+        this.release_date = release_date;
     }
     public String getPosterPath() {
         return posterPath;
@@ -36,5 +40,9 @@ public class MovieResponse {
 
     public int getId() {
         return id;
+    }
+
+    public String getRelease_date() {
+        return release_date;
     }
 }
