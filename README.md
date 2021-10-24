@@ -1,6 +1,3 @@
-# MovApp
-Aplicativo Android para descobrir quais filmes estão em cartaz com uso da API: https://www.themoviedb.org/
-
 <h2 align="center">
 MovApp
 </h2>
@@ -34,17 +31,15 @@ MovApp
 MovApp - Millions of movies, TV shows and people to discover. Explore now.
 
 <div align="center">
-<h3> Portrait </h3>
-
-  <img src="https://user-images.githubusercontent.com/46942672/138616754-69eca2ee-d2e4-409e-bf2f-6d8f098e0231.jpg" width="250"/>
-  <img src="https://media.giphy.com/media/PPDrW3WRRLZZhTNPit/giphy.gif" width="250"/>
-  <img src="https://user-images.githubusercontent.com/46942672/138616815-9c65639c-fd03-4eab-9c37-cae9123ecb16.jpg" width="250"/>
-
-
-<h3>Landscape</h3>
-
+  <h3> Portrait </h3>
+  <img src="https://user-images.githubusercontent.com/46942672/138616754-69eca2ee-d2e4-409e-bf2f-6d8f098e0231.jpg" width="215"/>  
+  &nbsp; &nbsp;
+  <img src="https://user-images.githubusercontent.com/46942672/138617515-0ba2a396-b289-44a0-96fb-843f7d6a2f40.gif"/>
+  &nbsp; &nbsp;
+  <img src="https://user-images.githubusercontent.com/46942672/138616815-9c65639c-fd03-4eab-9c37-cae9123ecb16.jpg" width="215"/>
+  
+  <h3>Landscape</h3>
   <img src="https://user-images.githubusercontent.com/46942672/138616594-c0f33635-ac18-49a9-ac13-d3c8e3688588.jpg" width="720"/>
-
 </div>
 
 ## :rocket: Technologies
