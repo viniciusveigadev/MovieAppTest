@@ -1,9 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/MovieAppTest/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.16944444444444445" />
+        <entry key="..\:/AndroidStudioProjects/MovieAppTest/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.16944444444444445" />
+        <entry key="..\:/AndroidStudioProjects/MovieAppTest/app/src/main/res/drawable/ic_star_white.xml" value="0.13958333333333334" />
+        <entry key="..\:/AndroidStudioProjects/MovieAppTest/app/src/main/res/drawable/ic_up_page.xml" value="0.13958333333333334" />
+        <entry key="..\:/AndroidStudioProjects/MovieAppTest/app/src/main/res/layout/activity_details_movie.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/MovieAppTest/app/src/main/res/layout/activity_favorite.xml" value="0.17239583333333333" />
+        <entry key="..\:/AndroidStudioProjects/MovieAppTest/app/src/main/res/layout/activity_list_movie.xml" value="0.15" />
+        <entry key="..\:/AndroidStudioProjects/MovieAppTest/app/src/main/res/layout/activity_movie_details.xml" value="0.17239583333333333" />
+        <entry key="..\:/AndroidStudioProjects/MovieAppTest/app/src/main/res/layout/favorite_movies.xml" value="0.17239583333333333" />
+        <entry key="..\:/AndroidStudioProjects/MovieAppTest/app/src/main/res/layout/movie_item.xml" value="0.17239583333333333" />
+        <entry key="..\:/AndroidStudioProjects/MovieAppTest/app/src/main/res/layout/movie_list_activity.xml" value="0.15" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/drawable-v24/ic_icon_text.xml" value="0.221875" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.221875" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/drawable/ic_down_page.xml" value="0.3828125" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/drawable/ic_icon.xml" value="0.3828125" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.3828125" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/drawable/ic_star.xml" value="0.221875" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/drawable/ic_star_gold.xml" value="0.221875" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/drawable/ic_star_white.xml" value="0.3828125" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/drawable/ic_up_page.xml" value="0.3828125" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/drawable/page_custom.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/drawable/splash.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/layout/activity_details_movie.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/layout/activity_film.xml" value="0.2" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/layout/activity_list_film.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/layout/activity_list_movie.xml" value="0.4" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/layout/item_film.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/layout/item_movie.xml" value="0.25" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.221875" />
+        <entry key="..\:/Users/PedroAbreu/AndroidStudioProjects/TheMovieDB/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.10555555555555556" />
+      </map>
+    </option>
+  </component>
+  <component name="EntryPointsManager">
+    <pattern value="abreu.pedro.themoviedb.data.network.response.MovieResult" />
+    <pattern value="abreu.pedro.themoviedb.data.network.response.MovieResult" method="MovieResult" />
+    <pattern value="abreu.pedro.themoviedb.data.network.response.MovieResponse" method="MovieResponse" />
+    <pattern value="abreu.pedro.themoviedb.ui.detailsMovie.DetailsMovieContract" />
+    <pattern value="abreu.pedro.themoviedb.ui.listMovie.ListMovieContract" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2" />
+      </ProjectState>
+    </option>
   </component>
 </project>

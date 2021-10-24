@@ -10,11 +10,11 @@
         android:id="@+id/toolbar_favorite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@color/purple_700"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:title="Filmes Favoritos"
-        app:titleTextColor="@color/white"/>
+        app:titleTextColor="@color/white" />
 
     <ListView
         android:id="@+id/list_view"
